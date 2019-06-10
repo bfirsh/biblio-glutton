@@ -12,6 +12,8 @@ services:
     restart: always
     ports:
       - 8070:8070
+    volumes:
+      - ".docker/grobid.properties:/opt/grobid/grobid-home/config/grobid.properties"
   elasticsearch:
     image: elasticsearch:6.7.1
     environment:
